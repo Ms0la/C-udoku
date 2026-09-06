@@ -1,16 +1,9 @@
 #include <stdio.h>
 
+#include "board.h"
+
 int sudoku[9][9];
 const int rowSum = 45;
-
-void printSudoku(){
-    for (int i = 0; i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
-            printf("%d\t", sudoku[i][j]);
-        }
-        printf("\n");
-    }
-}
 
 int main(void) {
     sudoku[0][0] = 2;
@@ -39,7 +32,7 @@ int main(void) {
     sudoku[8][3] = 8;
     sudoku[8][6] = 3;
 
-    printSudoku();
+    printBoard(sudoku);
     return 0;
 }
 
