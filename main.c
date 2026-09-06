@@ -1,16 +1,7 @@
 #include <stdio.h>
 
-char board[23][23];
 int sudoku[9][9];
 const int rowSum = 45;
-
-void generateBoard() {
-    for (int i=0; i<23; i++) {
-        for (int j=0; j<23; j++) {
-
-        }
-    }
-}
 
 void printSudoku(){
     for (int i = 0; i < 9; i++) {

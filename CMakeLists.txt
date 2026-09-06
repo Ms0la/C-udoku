@@ -3,4 +3,6 @@ project(sudokusolver C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(sudokusolver main.c)
+add_executable(sudokusolver main.c
+        board.c
+        board.h)
