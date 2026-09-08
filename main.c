@@ -1,11 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "board.h"
+#include "sudoku.h"
 
 
 
 int main(void) {
-    //printBoard(sudoku);
+    int** sudoku = generateSudoku();
+    printBoard(sudoku);
+
+    free(sudoku);
     return 0;
 }
 

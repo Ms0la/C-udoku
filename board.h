@@ -7,6 +7,6 @@
 
 #define SUDOKUSIZE 9
 
-void printBoard();
+void printBoard(int** sudoku);
 
 #endif //SUDOKUSOLVER_BOARD_H

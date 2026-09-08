@@ -3,12 +3,29 @@
 //
 
 #include "sudoku.h"
+
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #include "board.h"
 
-static int sudoku[SUDOKUSIZE][SUDOKUSIZE];
+int **sudoku;
 
-void generateSudoku() {
+int** generateSudoku() {
+    sudoku = malloc(SUDOKUSIZE * sizeof(int *));
+    if (sudoku == NULL) {
+        // Handle memory allocation failure
+        printf("Memory allocation failed for sudoku columns\n");
+        exit(1);
+    }
     for (int i = 0; i < SUDOKUSIZE; i++) {
+        sudoku[i] = malloc(SUDOKUSIZE * sizeof(int));
+        if (sudoku[i] == NULL) {
+            // Handle memory allocation failure
+            printf("Memory allocation failed for sudoku arrays %d\n", i);
+            exit(1);
+        }
         for (int j = 0; j < SUDOKUSIZE; j++) {
             sudoku[i][j] = 0;
         }
@@ -38,5 +55,6 @@ void generateSudoku() {
     sudoku[8][0] = 9;
     sudoku[8][3] = 8;
     sudoku[8][6] = 3;
+    return sudoku;
 }
 

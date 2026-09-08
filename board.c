@@ -8,7 +8,7 @@
 
 const char sudokuRowSeparator[] = "+-------+-------+-------+";
 
-void printBoard(int sudoku[SUDOKUSIZE][SUDOKUSIZE]) {
+void printBoard(int** sudoku) {
     printf("\n%s\n", sudokuRowSeparator);
     for (int i=0; i<SUDOKUSIZE; i++) {
         for (int j=0; j<SUDOKUSIZE; j++) {
