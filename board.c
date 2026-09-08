@@ -6,20 +6,19 @@
 
 #include <stdio.h>
 
-const int sudokuSize = 9;
 const char sudokuRowSeparator[] = "+-------+-------+-------+";
 
-void printBoard(int sudoku[sudokuSize][sudokuSize]) {
+void printBoard(int sudoku[SUDOKUSIZE][SUDOKUSIZE]) {
     printf("\n%s\n", sudokuRowSeparator);
-    for (int i=0; i<sudokuSize; i++) {
-        for (int j=0; j<sudokuSize; j++) {
+    for (int i=0; i<SUDOKUSIZE; i++) {
+        for (int j=0; j<SUDOKUSIZE; j++) {
             if (j % 3 == 0)
                 printf("| ");
             if (sudoku[i][j] == 0)
                 printf(". ");
             else
                 printf("%d ", sudoku[i][j]);
-            if (j== sudokuSize - 1)
+            if (j== SUDOKUSIZE - 1)
                 printf("|");
         }
         printf("\n");

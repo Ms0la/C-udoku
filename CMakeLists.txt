@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(sudokusolver main.c
         board.c
-        board.h)
+        board.h
+        sudoku.c
+        sudoku.h)
